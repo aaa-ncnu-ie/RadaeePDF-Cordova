@@ -4,11 +4,13 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CancellationSignal;
 import android.os.ParcelFileDescriptor;
+import android.os.StrictMode;
 import android.print.PageRange;
 import android.print.PrintAttributes;
 import android.print.PrintDocumentAdapter;
@@ -39,7 +41,7 @@ import com.radaee.util.RadaeePluginCallback;
 import com.radaee.view.ILayoutView;
 import com.radaee.view.PDFViewPager;
 import com.radaee.view.PDFViewThumb;
-import com.radaee.viewlib.R;
+import com.radaee.pdf.PDFViewer.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -119,6 +121,10 @@ public class PDFViewController implements OnClickListener, SeekBar.OnSeekBarChan
 
 	public PDFViewController(RelativeLayout parent, ILayoutView view)
 	{
+		// TODO: temporary fix
+		StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+		StrictMode.setVmPolicy(builder.build());
+
 		m_parent = parent;
 		m_view = view;
 		sFileState = NOT_MODIFIED;
@@ -131,6 +137,7 @@ public class PDFViewController implements OnClickListener, SeekBar.OnSeekBarChan
 		RelativeLayout layout = (RelativeLayout)m_bar_cmd.BarGetView();
 		btn_view = (ImageView)layout.findViewById(R.id.btn_view);
 		btn_find = (ImageView)layout.findViewById(R.id.btn_find);
+		btn_share = (ImageView)layout.findViewById(R.id.btn_share);
 		btn_annot = (ImageView)layout.findViewById(R.id.btn_annot);
 		btn_select = (ImageView)layout.findViewById(R.id.btn_select);
         btn_outline = (ImageView)layout.findViewById(R.id.btn_outline);
@@ -163,7 +170,6 @@ public class PDFViewController implements OnClickListener, SeekBar.OnSeekBarChan
 		LinearLayout moreLayout = (LinearLayout)m_menu_more.MenuGetView();
 		btn_save = moreLayout.findViewById(R.id.save);
 		btn_print = moreLayout.findViewById(R.id.print);
-		btn_share = moreLayout.findViewById(R.id.share);
 		btn_add_bookmark = moreLayout.findViewById(R.id.add_bookmark);
 		btn_show_bookmarks = moreLayout.findViewById(R.id.show_bookmarks);
 
@@ -1034,7 +1040,8 @@ public class PDFViewController implements OnClickListener, SeekBar.OnSeekBarChan
 				((ImageView)btn_show_bookmarks.findViewById(R.id.show_bookmarks_icon)).setColorFilter(color);
 				((ImageView)btn_save.findViewById(R.id.save_icon)).setColorFilter(color);
 				((ImageView)btn_print.findViewById(R.id.print_icon)).setColorFilter(color);
-				((ImageView)btn_share.findViewById(R.id.share_icon)).setColorFilter(color);
+				((ImageView)btn_share.findViewById(R.id.btn_share)).setColorFilter(color);
+//				((ImageView)btn_share.findViewById(R.id.share_icon)).setColorFilter(color);
 			} catch (Exception e) {e.getMessage();}
 		}
 

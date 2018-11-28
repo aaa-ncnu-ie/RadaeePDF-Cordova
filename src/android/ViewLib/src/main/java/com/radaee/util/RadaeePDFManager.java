@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.radaee.pdf.Global;
 import com.radaee.pdf.Page;
 import com.radaee.reader.PDFViewAct;
-import com.radaee.viewlib.R;
+import com.radaee.pdf.PDFViewer.R;
 
 import java.io.File;
 
@@ -24,18 +24,18 @@ public class RadaeePDFManager implements RadaeePluginCallback.PDFReaderListener 
     private int mCurrentPage = -1;
     private int mIconsBgColor = -1;
     private int mTitleBgColor = -1;
-    public static boolean sHideSaveButton = false;
-    public static boolean sHideMoreButton = false;
-    public static boolean sHideUndoButton = false;
-    public static boolean sHideRedoButton = false;
-    public static boolean sHidePrintButton = false;
-    public static boolean sHideAnnotButton = false;
-    public static boolean sHideSelectButton = false;
+    public static boolean sHideSaveButton = true;
+    public static boolean sHideMoreButton = true;
+    public static boolean sHideUndoButton = true;
+    public static boolean sHideRedoButton = true;
+    public static boolean sHidePrintButton = true;
+    public static boolean sHideAnnotButton = true;
+    public static boolean sHideSelectButton = true;
     public static boolean sHideSearchButton = false;
-    public static boolean sHideOutlineButton = false;
+    public static boolean sHideOutlineButton = true;
     public static boolean sHideViewModeButton = false;
-    public static boolean sHideAddBookmarkButton = false;
-    public static boolean sHideShowBookmarksButton = false;
+    public static boolean sHideAddBookmarkButton = true;
+    public static boolean sHideShowBookmarksButton = true;
     private RadaeePluginCallback.PDFReaderListener mListener;
 
     public RadaeePDFManager() {
