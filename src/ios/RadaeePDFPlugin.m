@@ -381,11 +381,11 @@
         [m_pdf setHideMoreImage:YES];
     } else {
         [m_pdf setHideSearchImage:NO];
-        [m_pdf setHideDrawImage:NO];
-        [m_pdf setHideSelImage:NO];
-        [m_pdf setHideUndoImage:NO];
-        [m_pdf setHideRedoImage:NO];
-        [m_pdf setHideMoreImage:NO];
+        [m_pdf setHideDrawImage:YES];
+        [m_pdf setHideSelImage:YES];
+        [m_pdf setHideUndoImage:YES];
+        [m_pdf setHideRedoImage:YES];
+        [m_pdf setHideMoreImage:YES];
     }
     
     /*
