@@ -57,9 +57,13 @@
     UIBarButtonItem *gridButton=[[UIBarButtonItem alloc]initWithImage:gridImg style:UIBarButtonItemStylePlain target:self action:@selector(gridlick)];
     gridButton.width = ICON_WIDTH;
     
+    UIImage *shareImg = (_shareImage) ? _shareImage : [UIImage imageNamed:@"btn_share"];
+    UIBarButtonItem *shareButton=[[UIBarButtonItem alloc]initWithImage:shareImg style:UIBarButtonItemStylePlain target:self action:@selector(sharePDF)];
+    gridButton.width = ICON_WIDTH;
+    
     UIImage *moreImg = (_moreImage) ? _moreImage : [UIImage imageNamed:@"btn_more"];
     _moreButton = [[UIBarButtonItem alloc] initWithImage:moreImg style:UIBarButtonItemStylePlain target:self action:@selector(moreClick)];
-    normalToolBarArray = [[NSMutableArray alloc] initWithObjects:searchButton,drawButton,selectText,undoButton,redoButton,gridButton, [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil], _moreButton,nil];
+    normalToolBarArray = [[NSMutableArray alloc] initWithObjects:searchButton,shareButton,drawButton,selectText,undoButton,redoButton,gridButton, [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil], _moreButton,nil];
     
     UIImage *rightImg = (_nextImage) ? _nextImage : [UIImage imageNamed:@"btn_right"];
     UIBarButtonItem *nextbutton=[[UIBarButtonItem alloc]initWithImage:rightImg style:UIBarStyleBlackOpaque target:self action:@selector(nextword)];
@@ -87,8 +91,8 @@
     cancelbtn.width = ICON_WIDTH;
     performToolBarArray = [[NSArray alloc]initWithObjects:playbutton,deletebutton,cancelbtn,nil];
     
-    
-    NSMutableArray *hiddenItems = [NSMutableArray arrayWithObjects: [NSNumber numberWithBool:_hideSearchImage], [NSNumber numberWithBool:_hideDrawImage], [NSNumber numberWithBool:_hideSelImage], [NSNumber numberWithBool:_hideUndoImage], [NSNumber numberWithBool:_hideRedoImage],  [NSNumber numberWithBool:_hideGridImage], [NSNumber numberWithBool:NO], [NSNumber numberWithBool:_hideMoreImage], nil];
+    // hardcoded not to hide share button
+    NSMutableArray *hiddenItems = [NSMutableArray arrayWithObjects: [NSNumber numberWithBool:_hideSearchImage], [NSNumber numberWithBool:NO], [NSNumber numberWithBool:_hideDrawImage], [NSNumber numberWithBool:_hideSelImage], [NSNumber numberWithBool:_hideUndoImage], [NSNumber numberWithBool:_hideRedoImage],  [NSNumber numberWithBool:_hideGridImage], [NSNumber numberWithBool:NO], [NSNumber numberWithBool:_hideMoreImage], nil];
     
     NSMutableArray *objectsToRemove = [NSMutableArray array];
     for (int i = 0; i < hiddenItems.count; i++) {
@@ -203,6 +207,12 @@
 {
     if (self.m_delegate) {
         [_m_delegate annotCancel];
+    }
+}
+- (void)sharePDF;
+{
+    if (self.m_delegate) {
+        [_m_delegate sharePDF];
     }
 }
 

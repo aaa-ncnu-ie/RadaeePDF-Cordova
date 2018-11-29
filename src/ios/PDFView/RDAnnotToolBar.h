@@ -19,6 +19,7 @@
 - (void)undoAnnot;
 - (void)redoAnnot;
 - (void)toggleGrid;
+- (void)sharePDF;
 - (void)showMoreButtons;
 //performbar delegate
 - (void)nextword;
@@ -50,6 +51,7 @@
 @property (strong, nonatomic) UIImage *selectImage;
 @property (strong, nonatomic) UIImage *prevImage;
 @property (strong, nonatomic) UIImage *nextImage;
+@property (strong, nonatomic) UIImage *shareImage;
 
 @property (nonatomic) BOOL hideSearchImage;
 @property (nonatomic) BOOL hideDrawImage;
