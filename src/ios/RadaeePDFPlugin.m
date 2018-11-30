@@ -380,7 +380,7 @@
         [m_pdf setHideRedoImage:YES];
         [m_pdf setHideMoreImage:YES];
     } else {
-        [m_pdf setHideSearchImage:NO];
+        [m_pdf setHideSearchImage:YES];
         [m_pdf setHideDrawImage:YES];
         [m_pdf setHideSelImage:YES];
         [m_pdf setHideUndoImage:YES];
