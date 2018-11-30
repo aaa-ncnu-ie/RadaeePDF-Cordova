@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.radaee.pdf.Global;
 import com.radaee.pdf.Page;
 import com.radaee.reader.PDFViewAct;
-import com.radaee.pdf.PDFViewer.R;
+import com.radaee.viewlib.R;
 
 import java.io.File;
 
