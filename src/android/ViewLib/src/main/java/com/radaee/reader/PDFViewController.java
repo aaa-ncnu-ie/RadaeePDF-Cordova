@@ -41,7 +41,7 @@ import com.radaee.util.RadaeePluginCallback;
 import com.radaee.view.ILayoutView;
 import com.radaee.view.PDFViewPager;
 import com.radaee.view.PDFViewThumb;
-import com.radaee.pdf.PDFViewer.R;
+import com.radaee.viewlib.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
