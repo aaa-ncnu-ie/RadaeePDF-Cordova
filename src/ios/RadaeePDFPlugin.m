@@ -447,7 +447,7 @@
     if (iconsBackgroundColor != 0) {
         navController.navigationBar.tintColor = UIColorFromRGB(iconsBackgroundColor);
     } else {
-        navController.navigationBar.tintColor = [UIColor orangeColor];
+        navController.navigationBar.tintColor = [UIColor blackColor];
     }
     
     [navController.navigationBar setTranslucent:NO];
