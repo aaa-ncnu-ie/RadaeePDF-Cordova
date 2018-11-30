@@ -365,6 +365,8 @@
         <resource-file src="src/ios/Resources/btn_annot_rect.png" />
         <resource-file src="src/ios/Resources/btn_done.png" />
         <resource-file src="src/ios/Resources/btn_left.png" />
+        <resource-file src="src/ios/Resources/btn_left@2x.png" />
+        <resource-file src="src/ios/Resources/btn_left@3x.png" />
         <resource-file src="src/ios/Resources/btn_outline.png" />
         <resource-file src="src/ios/Resources/btn_perform.png" />
         <resource-file src="src/ios/Resources/btn_print.png" />
@@ -393,6 +395,8 @@
         <resource-file src="src/ios/Resources/btn_undo.png" />
         <resource-file src="src/ios/Resources/btn_redo.png" />
         <resource-file src="src/ios/Resources/btn_share.png" />
+        <resource-file src="src/ios/Resources/btn_share@2x.png" />
+        <resource-file src="src/ios/Resources/btn_share@3x.png" />
         
 
         <!-- Radaee sources -->
