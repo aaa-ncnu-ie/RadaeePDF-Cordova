@@ -374,6 +374,8 @@
         <resource-file src="src/ios/Resources/btn_grid.png" />
         <resource-file src="src/ios/Resources/export_annot.png" />
         <resource-file src="src/ios/Resources/btn_back.png" />
+        <resource-file src="src/ios/Resources/btn_back@2x.png" />
+        <resource-file src="src/ios/Resources/btn_back@3x.png" />
         <resource-file src="src/ios/Resources/btn_more.png" />
         <resource-file src="src/ios/Resources/btn_select.png" />
         <resource-file src="src/ios/Resources/btn_show.png" />
