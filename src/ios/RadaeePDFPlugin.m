@@ -39,6 +39,7 @@
     ovalColor = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"OvalColor"];
     selColor = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"SelColor"];
     arrowColor = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"ArrowColor"];
+    iconsBackgroundColor = 0xff1778d3;
 }
 
 #pragma mark - Plugin API
@@ -444,11 +445,7 @@
         navController.navigationBar.barTintColor = [UIColor blackColor];
     }
     
-    if (iconsBackgroundColor != 0) {
-        navController.navigationBar.tintColor = UIColorFromRGB(iconsBackgroundColor);
-    } else {
-        navController.navigationBar.tintColor = [UIColor blackColor];
-    }
+    navController.navigationBar.tintColor = UIColorFromRGB(iconsBackgroundColor);
     
     [navController.navigationBar setTranslucent:NO];
     
