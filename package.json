@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-radaeepdf-maks",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "RadaeePDF reader cordova plugin",
   "cordova": {
     "platforms": [
